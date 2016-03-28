@@ -1,0 +1,37 @@
+﻿Encapsulation is defined 'as the process of enclosing one or more items within a physical or logical package'. Encapsulation, in object oriented programming methodology, prevents access to implementation details.
+
+Abstraction and encapsulation are related features in object oriented programming. Abstraction allows making relevant information visible and encapsulation enables a programmer to implement the desired level of abstraction.
+
+Encapsulation is implemented by using access specifiers. An access specifier defines the scope and visibility of a class member. C# supports the following access specifiers:
+
+Public
+Private
+Protected ->can only be accessed within its child class.
+Internal-->The internal access specifier hides its member variables and methods from other classes and objects, that is resides in other namespace.
+Protected internal
+
+Protected Access Specifier
+Protected access specifier allows a child class to access the member variables and member functions of its base class. This way it helps in implementing inheritance. We will discuss this in more details in the inheritance chapter.
+
+Internal Access Specifier
+Internal access specifier allows a class to expose its member variables and member functions to other functions and objects in the current assembly. In other words, any member with internal access specifier can be accessed from any class or method defined within the application in which the member is defined.
+
+Protected Internal Access Specifier
+The protected internal access specifier allows a class to hide its member variables and member functions from other class objects and functions, except a child class within the same application. This is also used while implementing inheritance.
+Class is the best example of encapsulation.
+
+Using an Interface
+Sometimes we can use an interface to implement encapsulation. Although the interface itself is a main concept or pillar in the object oriented programming system, I will show a simple sample here. Later on in the series, I will share a detailed example of an Interface.
+encapsulation is a part of abstraction or we can say it's a subset of abstraction.
+
+IAccount myAccount = new AsianAccount();
+IAccount myAccount = new EuropeanAccount();
+IAccount myAccount = new USAAccount();
+Now, based on the current location (for which we can have variables), whenever we want to view the balance information of a specific account, we can use the IAccount interface and we can see how AsianAccount, EuropeanAccount, and USAAccount hide information from each other, getting the balance details through the IAccount interface.
+
+
+
+
+
+
+http://www.completecsharptutorial.com/basic/understanding-concepts.php
